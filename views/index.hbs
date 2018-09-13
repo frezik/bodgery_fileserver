@@ -1,2 +1,15 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Bodgery File Server Signup</h1>
+
+<p>Please type in the number on your RFID tag. Leading zeros are important.
+If it matches, we will send a link to your member email account for completing 
+signup.
+
+<form method="GET">
+<p><input id="rfid-tag" type="text" name="rfid" placeholder="RFID">
+<input type="button" value="Submit" onClick="send_rfid_tag()"></p>
+</form>
+
+<p id="wait-msg" style="display: none">Sending data, please wait . . . </p>
+<p id="sent-msg" style="display: none">Information sent. Check your email</p>
+<p id="err-msg" style="display: none">Sorry, there was an error. Please try 
+again later</p>
